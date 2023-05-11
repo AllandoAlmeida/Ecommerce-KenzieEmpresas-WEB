@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="./../css/reset.css">
+    <link rel="stylesheet" href="./../css/globalStyles.css">
+    <link rel="stylesheet" href="./../css/button.css">
+    <link rel="stylesheet" href="./../css/register.css">
+
+    <script src="./../scripts/register.js" type="module" defer></script>
+</head>
+<body>
+    <header class="container__header">
+        <div class="container__header--items">
+            <div class="header__title">
+                <div class="logo"></div>
+                <img class="KenzieEmpresas" src="./../assets/KenzieEmpresas.svg" alt="KenzieEmpresas">
+            </div>
+            <div id="login" class=" container__header--btn">
+                <button id="home" class="emptyButton btn__backHome btn" type="submit">Home</button>
+                <button id="login" class="fullButton btn__openRegister btn" type="submit">Login</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <form action="" class="formLogin">
+
+                <h1 class="title-1">Cadastre-se</h1>
+                <input class="inputForm" type="text" name="name" id="name" placeholder="  Seu nome">
+                <input class="inputForm" type="email" name="email" id="email" placeholder="  Seu e-mail">
+                <input class="inputForm" type="password" name="password" id="senha" placeholder="  Sua senha">
+                <button type="submit" class="formBtn btn-formLogin" >Acessar</button>
+                <button type="submit" class="formBtn btn-Registre" >Cadastre-se</button>
+
+                
+            </form>
+        </section>
+    </main>
+    <div class="toast__container hidden">
+        <p></p>
+    </div>
+   
+</body>
+</html>

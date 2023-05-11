@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - kenzie Empresas</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/globalStyles.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/button.css">
+
+    <!-- Script -->
+    <script src="src/scripts/index.js" type="module" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="container__header">
+            <div class="container__header--items">
+                <div class="header__title">
+                    <div class="logo"></div>
+                    <img class="header__title--item KenzieEmpresas" src="./src/assets/KenzieEmpresas.svg" alt="Kenzie Empresas">
+                </div>
+                <div id="login" class="container__header--btn">
+                    <button class=" emptyButton btn__openLogin btn" type="submit">Login</button>
+                    <button id="register" class="fullButton btn__openRegister btn" type="submit">Cadastro</button>
+                </div>
+
+            </div>
+        </header>
+        <section class="container">
+            <div class="container__main--items">
+                <div class="container__image">
+                    <figure>
+                        <img class="imageHome" src="src/assets/backgroundHome.svg" alt="image">
+                    </figure>
+                </div>
+                <section class="container__select">
+                    <div>
+                        <select class="selectionBox" name="categoryCompany" id="category">
+                        <option value="">Selecionar Setor</option>
+                        </select> 
+
+                    </div>
+                    <nav class="container__companies">
+                        <div class="list__companies">
+                            <div class="list__companies--title">
+                                <h1 class="title-1">Lista de Empresas</h1>
+                            </div>
+                        </div>
+                        <div class="container__companies--nav">
+                            <div class="list__companies--item"></div>
+
+                        </div>    
+                    </nav>
+                </section>
+            </div>
+        </section>
+    </main>
+    <div class="toast__container hidden">
+        <p>Login realizado com sucesso</p>
+    </div>
+</body>
+</html>

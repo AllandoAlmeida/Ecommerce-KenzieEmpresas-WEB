@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="./../css/reset.css">
+    <link rel="stylesheet" href="./../css/globalStyles.css">
+    <link rel="stylesheet" href="./../css/button.css">
+    <link rel="stylesheet" href="./../css/adminPage.css">
+
+    <script src="./../scripts/adminPage.js" type="module" defer></script>
+</head>
+<body>
+    <header class="container__header">
+        <div class="container__header--items">
+            <div class="header__title">
+                <div class="logo"></div>
+                <img class="KenzieEmpresas" src="./../assets/KenzieEmpresas.svg" alt="KenzieEmpresas">
+            </div>
+            <div id="login" class="container__header--btn">
+                <button id="logout" class="emptyButton btn__openRegister btn" type="submit">logout</button>
+            </div>
+        </div>
+    </header>
+    <main class="container__adm">
+        <section class="container__adm--item">
+            <div class="container__adm--header">
+                <select name="empresa" id="company">
+                    <option  value="">Selecionar Empresa</option>
+                </select>
+            </div>
+            <div>
+                <div>
+                    <h1>Departamentos</h1>
+                    <button type="submit">Criar</button>
+                </div>
+            </div> 
+        </section>
+        <section class="container__adm--item">
+            <div class="company departments">
+                <nav class="container__departments"></nav>   
+            </div>
+            <div>
+                <h1>Usuários cadastrados</h1>
+            </div>
+            <div class="company employees">
+                <nav class="container__employees"></nav>   
+            </div>
+
+        </section>
+    </main>    <div class="toast__container hidden">
+        <p></p>
+    </div>
+</body>
+</html>
