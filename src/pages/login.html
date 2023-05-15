@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./../css/globalStyles.css">
     <link rel="stylesheet" href="./../css/button.css">
     <link rel="stylesheet" href="./../css/login.css">
+    <link rel="stylesheet" href="./../css/toast.css">
+    <link rel="stylesheet" href="./../css/text.css">
 
     <script src="./../scripts/login.js" type="module" defer></script>
 </head>
@@ -21,7 +23,7 @@
             </div>
             <div id="login" class="container__header--btn">
                 <button id="home"class="emptyButton btn__backHome btn" type="submit">home</button>
-                <button id="register" class="fullButton btn__openRegister btn" type="submit">Cadastro</button>
+                <button id="register1" class="fullButton btn__openRegister btn" type="submit">Cadastro</button>
             </div>
         </div>
     </header>
@@ -35,17 +37,15 @@
                 <input class="inputForm input__login" type="password" name="password" id="senha" placeholder="  Sua senha">
                 <button type="submit" class="formBtn btn-formLogin" >Acessar</button>
                 <p class="paragrafh">ou</p>
-                <button type="submit" class="formBtn btn-Registre" >Cadastre-se</button>
+                <button id="register2" type="submit" class="formBtn btn-Registre" >Cadastre-se</button>
 
                 
             </form>
         </section>
     </main>
     <div class="toast__container hidden">
-        <p>Login realizado com sucesso</p>
+        <p></p>
     </div>
-    <div class="toast__container hidden">
-        <p>Login realizado com sucesso</p>
-    </div>
+    
 </body>
 </html>

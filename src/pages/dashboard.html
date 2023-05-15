@@ -4,12 +4,184 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard ADM</title>
+    <link rel="stylesheet" href="./../css/reset.css">
+    <link rel="stylesheet" href="./../css/globalStyles.css">
+    <link rel="stylesheet" href="./../css/button.css">
+    <link rel="stylesheet" href="./../css/dashboard.css">
+    <link rel="stylesheet" href="./../css/modal.css">
+    <link rel="stylesheet" href="./../css/text.css">
+    <link rel="stylesheet" href="./../css/toast.css">
+
+    <script src="./../scripts/dashboard.js" type="module" defer></script>
+    <script src="./../scripts/cleanSelect.js" type="module"></script>
 </head>
 <body>
-    teste
+    <header class="container__header">
+        <div class="container__header--items">
+            <div class="header__title">
+                <div class="logo"></div>
+                <img class="KenzieEmpresas" src="./../assets/KenzieEmpresas.svg" alt="KenzieEmpresas">
+            </div>
+            <div id="login" class="container__header--btn">
+                <button id="logout" class="emptyButton btn__openRegister btn" type="submit">logout</button>
+            </div>
+        </div>
+    </header>
+    <main class="container__adm">
+        <section class="container__adm--item">
+            <div class="container__adm--header">
+                <select name="empresa" id="company" class="list_company text-1">
+                    <option class="text-1 list_company__option" value="">Selecionar Empresa</option>
+                </select>
+            </div>
+            <div>
+                <div class="SectionDepartments">
+                    <h1 class="title-Departments">Departamentos</h1>
+                    <button id="createDepartments"type="submit"> + Criar</button>
+                </div>
+            </div> 
+        </section>
+        <section class="container__adm--item">
+            <div class="company departments">
+                <nav class="box container__departments"></nav>   
+            </div>
+            <div class="employee_title">
+                <h1 class="employee_title__paragrafh title-2">Usuários cadastrados</h1>
+            </div>
+            <div class="company employees">
+                <nav class="box container__employees"></nav>   
+            </div>
+
+        </section>
+    </main>
     <div class="toast__container hidden">
-        <p>Login realizado com sucesso</p>
+        <p></p>        
     </div>
+     <!------------------------------------------ Departments ---------------------------------------->
+
+         <!------------------------------------------ Adminstrador - Modal createDeparta --------------------------------------------->
+    <dialog class="container_createDepartments">
+        <section class="container__modaltoView">
+            <div class="modalCreate__items">
+                <div class="section-btn__modalCreate">
+                    <button id="CloseModal" type="submit">x</button>
+                </div>
+                <form class="modalCreate__form" >
+                    <h1 class="title-1">Criar Departamento</h1>
+                    <input type="text" name="name" id="department" class="InputCreateNewDepartment text-2" placeholder=" Nome do departamento">
+                    <input type="text" name="description" id="department" class="InputCreateNewDepartment text-2" placeholder="Descrição">
+                    <select name="company_id" id="companyNewDepartment" class="text-1">
+                        <option value="">Selecionar empresa</option>
+                    </select>
+                    <button type="submit" id="btnCreate" class="ButtonCreateNewDepartment">Criar</button>
+                </form>
+            </div>
+        </section>
+    </dialog>
+    
+     <!------------------------------------------ Adminstrador - Modal visualizar ---------------------------------------->
+     <dialog class="container_toViewDepartments">
+        <section class="container__modaltoView">
+            <div class="modaltoView__items">
+                <div class="section-btn__modaltoView">
+                    <button id="CloseModaltoView" type="submit">x</button>
+                </div>
+                <div class="hireEmployee">
+                    <ul>
+                        <li class="hireEmployee-title">Nome de Departamento</li>
+                        <li class="hireEmployee-description">Descrição do Departamento</li>
+                        <li class="hireEmployee-company">empresa pertencente</li>
+                    </ul>
+                    <select class="text-1"name="" id="selectEmployees">
+                        <option value="">Selecionar colaborador</option>
+                    </select>
+                    <button id="hireAnEmployee" type="submit">Contratar</button>
+                    <div>
+                        <ul>
+                            <li>Username</li>
+                            <li>company name</li>
+                            <button type="submit">Desligar</button>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </dialog>
+
+    <!------------------------------------------ Adminstrador - Modal edit ---------------------------------------------->
+    <dialog class="container_editDepartments">
+        <section class="container__modaltoView">
+            <div class="modalCreate__items">
+                <div class="section-btn__modalEdit">
+                    <button id="CloseEdit" type="submit">x</button>
+                </div>
+                <div class="updateDepartment">
+                    <div class="updateDepartment__title">
+                       <h1></h1>
+                       
+                    </div>
+                </div>
+                <div class="updateDepartment__form">
+                    <input id="InputEdit" type="text" name="description" id="department" class="create"  placeholder="Valores anteriores da Descrição">
+                   
+                    <button id="btnEdit" type="">Salvar</button>
+
+                </div>
+        </section>
+    </dialog>
+    <!------------------------------------------ Adminstrador - Modal Delete --------------------------------------------->
+    <dialog class="container_delDepartments">
+        <section class="container__modalDelete">
+            <div class="modalDelete__items">
+                <div class="section-btn__modalDelete">
+                    <button id="CloseDel"type="submit">x</button>
+                </div>
+                <div class="modalDelete__alert">
+                    <h1 class="modalDelete__text title-1">Realmente deseja remover o</h1>
+                    <h1 class="modalDelete__text title-1">Departamento NOME</h1>
+                    <h1 class="modalDelete__text title-1">e demitir seus funcionários?</h1>
+                    <button type="submit" id="confirmDelDepartment">Remover</button>
+                </div>
+            </div>
+        </section>
+    </dialog>
+
+    <!------------------------------------------ Employees ---------------------------------------->
+    <!------------------------------------------ Modal edit ---------------------------------------->
+    <dialog class="container_editEmployee">
+        <section class="employee__modalEdit">
+            <div class="employeeEdit__items">
+                <div class="employeeEdit__butEdit">
+                    <button id="EmployeeCloseEdit" type="submit">x</button>
+                </div>
+                <div>
+                    <form class="employeeEdit">
+                        <label for="" class="title-1">Editar Usuário</label>
+                        <input type="text" name="name" id="Employees" class="inputEdit text-2" placeholder=" Nome" >
+                        <input type="email" name="email" id="Employees" class="inputEdit text-2" placeholder=" E-mail">
+                        <button id="updateEmployee" type="" class=" text-2">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </dialog>
+    <dialog id="deleteModal" class="container_delEmployee">
+        <section class="employee__modalDel">
+          <div class="employeeDel__items">
+            <div class="employeeDel__butDel">
+              <button id="EmployeeCloseDel" type="button">x</button>
+            </div>
+            <div>
+                <form class="formDelEmployee">
+                    <h1 class="title-1">Realmente deseja remover o usuário <strong><span id="employeeName"></span></strong></h1>
+                    <button class="confirmBtn text-2">Confirmar</button>
+                </form>
+            </div>
+          </div>
+        </section>
+      </dialog>
+    
 </body>
 </html>

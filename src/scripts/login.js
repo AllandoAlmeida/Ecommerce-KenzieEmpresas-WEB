@@ -1,7 +1,13 @@
 import { handleLogin } from './buttons.js'
-import { loginResquest } from './requests.js'
+import { cleanInput } from './cleanInput.js';
+
+import { HomePage } from './homePage.js';
+import { SignUp } from './signUp.js';
+import { toast } from './toast.js';
 
 
-
-loginResquest()
+SignUp()
+HomePage()
 handleLogin()
+toast()
+cleanInput()

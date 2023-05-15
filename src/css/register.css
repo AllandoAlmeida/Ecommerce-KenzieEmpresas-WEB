@@ -1,0 +1,38 @@
+main {
+    height: 97vh;
+    width: 100%;
+    background-image: url('./../assets/backgroundLogin.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container_register {
+    max-width: 1182px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 506px;
+    height: 459px;
+    background-color: var(--color-mode);
+}
+
+.formRegister {
+    display: flex;
+    flex-direction: column;
+
+}
