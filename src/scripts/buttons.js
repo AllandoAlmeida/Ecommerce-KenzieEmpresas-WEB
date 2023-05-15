@@ -138,6 +138,7 @@ export function handleCreateNewDepartment(closeModal) {
         inputs.forEach((input) => {
           input.value = '';
         });
+        renderDepartments()
 
         closeModal();
 
@@ -153,9 +154,6 @@ export function handleCreateNewDepartment(closeModal) {
     closeModal();
   });
 }
-
-// Chamada da função handleCreateNewDepartment passando closeModal como parâmetro
-handleCreateNewDepartment(closeModal);
 
 
 /*------------------------------------ Administrador - modal ----------------------------------------------- */
